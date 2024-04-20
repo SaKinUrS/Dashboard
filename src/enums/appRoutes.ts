@@ -1,0 +1,18 @@
+export enum AppRoutes {
+    Home = '/',
+    Dashboard = '/dashboard',
+    Product = '/product',
+    Favorites = '/favorites',
+    Inbox = '/inbox',
+    Order = '/order',
+    ProductStock = '/product-stock',
+    Pricing = '/pricing',
+    Calendar = '/calendar',
+    ToDo = '/todo',
+    Contacts = '/contacts',
+    UI = '/ui',
+    Team = '/team',
+    // NotFound = '*',
+    Settings = '/settings',
+    Pets = '/pets',
+}
