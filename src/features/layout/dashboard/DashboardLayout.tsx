@@ -9,7 +9,7 @@ interface IDashboardLayoutProps {}
 export const DashboardLayout: FC<IDashboardLayoutProps> = () => {
     const [collapsed, setCollapsed] = useState(true);
     return (
-        <Layout style={{ minHeight: '100vh' }}>
+        <Layout hasSider style={{ minHeight: '100vh' }}>
             <Layout.Sider
                 width={240}
                 collapsible
@@ -28,23 +28,25 @@ export const DashboardLayout: FC<IDashboardLayoutProps> = () => {
             >
                 <Sidebar setCollapsed={setCollapsed} collapsed={collapsed} />
             </Layout.Sider>
-            <Layout>
+            <Layout style={{ marginLeft: 86 }}>
                 <Layout.Header
-                    style={{
-                        padding: 0,
-                        position: 'sticky',
-                        top: 0,
-                        zIndex: 400,
-                        width: '100%',
-                        lineHeight: '1',
-                        height: 68,
-                        display: 'flex',
-                        alignItems: 'center',
-                    }}
+                    style={
+                        {
+                            // padding: 0,
+                            // position: 'sticky',
+                            // top: 0,
+                            // zIndex: 400,
+                            // width: '100%',
+                            // lineHeight: '1',
+                            // height: 68,
+                            // display: 'flex',
+                            // alignItems: 'center',
+                        }
+                    }
                 >
                     <Header />
                 </Layout.Header>
-                <Layout.Content style={{ padding: '16px 16px 30px 76px' }}>
+                <Layout.Content>
                     <Outlet />
                 </Layout.Content>
             </Layout>

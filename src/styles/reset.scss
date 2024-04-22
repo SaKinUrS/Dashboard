@@ -51,6 +51,7 @@ input::-ms-clear {
 }
 button {
     cursor: pointer;
+    background: transparent;
 }
 button::-moz-focus-inner {
     padding: 0;
@@ -83,5 +84,8 @@ h6 {
 body {
     font-family: 'Nunito Sans', sans-serif;
     margin: 0 auto;
-    background-color: #1b2431;
+    background-color: var(--secondary-color);
+}
+#root {
+    width: 100%;
 }

@@ -1,13 +1,27 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 .trigger {
-    background-color: #273142;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .menu {
     :global {
+        .ant-menu-item {
+            height: 50px;
+            line-height: 60px;
+        }
         .ant-menu-title-content {
             display: flex;
             justify-content: center;
             align-items: center;
-            border-radius: 6px;
+            border-radius: var(--small-border-radius);
+            transition: 0.2s linear;
+            height: 100%;
         }
         .ant-menu-item-selected {
             background-color: none !important;
@@ -21,9 +35,20 @@
                 border-radius: 0 100px 100px 0;
                 background-color: #4880ff;
             }
+            svg {
+                path,
+                rect {
+                    fill: var(--accent-color);
+                }
+            }
             .ant-menu-title-content {
                 background-color: #4880ff;
             }
         }
     }
+}
+.logoutIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
